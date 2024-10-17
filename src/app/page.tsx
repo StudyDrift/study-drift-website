@@ -1,3 +1,4 @@
+import { PromptSection } from "@/components/prompt"
 import Image from "next/image"
 
 export default function Home() {
@@ -50,9 +51,11 @@ export default function Home() {
           <span className="text-gray-600">
             Learn by Learning & Teach by Teaching
           </span>
-          <h1 className="text-[9rem] font-thin -mt-8">
+          <h1 className="text-[7rem] font-thin -mt-3">
             <span className="font-normal">Study</span> Drift
           </h1>
+
+          <PromptSection />
         </section>
       </div>
     </div>
