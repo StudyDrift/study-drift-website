@@ -50,7 +50,7 @@ export const PromptSection = ({ onComplete }: Props) => {
 
   return (
     <div className="mt-10 w-full flex justify-center items-center">
-      <div className="bg-white shadow w-[800px] sm:w-[600px] md:w-[700px] lg:w-[800px] h-fit py-4 rounded-full flex items-center px-6">
+      <div className="bg-white shadow w-[90%] sm:w-[90%] md:w-[700px] lg:w-[800px] h-fit py-4 rounded-full flex items-center px-6">
         {prompt}
         <div className="bg-gray-800 h-6 w-1 ml-0.5 rounded animate-pulse duration-100"></div>
       </div>

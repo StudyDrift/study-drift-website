@@ -6,11 +6,11 @@ export const PromptAnimation = () => {
   const [promptCompletion, setPromptCompletion] = useState("")
 
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-full px-8">
       <div className="mt-8">
         <PromptSection onComplete={setPromptCompletion} />
       </div>
-      <div className="h-72 mt-16">
+      <div className="mt-16 w-full lg:w-[900px] md:w-[700px] sm:w-full flex justify-center">
         <Structure show={promptCompletion === "structure"} />
       </div>
     </div>
@@ -18,40 +18,37 @@ export const PromptAnimation = () => {
 }
 
 const Structure = ({ show }: { show: boolean }) => {
+  const mods = [
+    {
+      name: "Overview of JavaScript, its history, and its role in web development.",
+      delay: "delay-0",
+    },
+    {
+      name: "Development Tools",
+      delay: "delay-500",
+    },
+    {
+      name: "Environment Setup Quiz",
+      delay: "delay-1000",
+    },
+    {
+      name: "Installing a code editor and setting up a browser for development.",
+      delay: "delay-[1500ms]",
+    },
+  ]
+
   return (
     <div className="flex flex-col gap-4">
-      <div
-        className={`w-[900px] h-12 bg-white rounded-md shadow flex items-center pl-4 transition-all duration-900 ${
-          show ? "opacity-70 mt-0 shadow-lg" : "opacity-0 mt-10"
-        }`}
-      >
-        <span className="text-lg">
-          Overview of JavaScript, its history, and its role in web development.
-        </span>
-      </div>
-      <div
-        className={`w-[900px] h-12 bg-white rounded-md shadow flex items-center pl-4 transition-all duration-800 delay-500 ${
-          show ? "opacity-70 mt-0 shadow-lg" : "opacity-0 mt-10"
-        }`}
-      >
-        <span className="text-lg">Development Tools</span>
-      </div>
-      <div
-        className={`w-[900px] h-12 bg-white rounded-md shadow flex items-center pl-4 transition-all duration-800 delay-1000 ${
-          show ? "opacity-70 mt-0 shadow-lg" : "opacity-0 mt-10"
-        }`}
-      >
-        <span className="text-lg">Environment Setup Quiz</span>
-      </div>
-      <div
-        className={`w-[900px] h-12 bg-white rounded-md shadow flex items-center pl-4 transition-all duration-800 delay-[1500ms] ${
-          show ? "opacity-70 mt-0 shadow-lg" : "opacity-0 mt-10"
-        }`}
-      >
-        <span className="text-lg">
-          Installing a code editor and setting up a browser for development.
-        </span>
-      </div>
+      {mods.map((mod, i) => (
+        <div
+          className={`w-full lg:w-[900px] md:w-[700px] sm:w-full py-4 bg-white rounded-md shadow flex items-center pl-4 transition duration-800 ${
+            mod.delay
+          } ${show ? "opacity-70 mt-0 shadow-lg" : "opacity-0 translate-y-3"}`}
+          key={i}
+        >
+          <span className="text-lg">{mod.name}</span>
+        </div>
+      ))}
 
       <div
         className={`mt-8 flex flex-col items-center transition-opacity duration-500 delay-[2000ms] ${
