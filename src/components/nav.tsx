@@ -11,7 +11,7 @@ export const Nav = () => {
       <nav className="flex items-center justify-between p-4 mt-4 mx-8">
         <div className="flex items-center justify-between">
           <Image
-            src="/logo-trimmed.svg"
+            src="./logo-trimmed.svg"
             alt="Study Drift Logo"
             width={60}
             height={60}
