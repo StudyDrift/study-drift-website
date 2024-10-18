@@ -1,4 +1,4 @@
-import { PromptSection } from "@/components/prompt"
+import { PromptAnimation } from "@/components/prompt-animation"
 import Image from "next/image"
 
 export default function Home() {
@@ -55,7 +55,7 @@ export default function Home() {
             <span className="font-normal">Study</span> Drift
           </h1>
 
-          <PromptSection />
+          <PromptAnimation />
         </section>
       </div>
     </div>
