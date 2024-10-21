@@ -7,7 +7,7 @@ export const PromptAnimation = () => {
 
   return (
     <div className="flex flex-col items-center w-full px-8">
-      <div className="mt-8">
+      <div className="mt-8 w-full">
         <PromptSection onComplete={setPromptCompletion} />
       </div>
       <div className="mt-16 w-full lg:w-[900px] md:w-[700px] sm:w-full flex justify-center">
@@ -38,7 +38,8 @@ const Structure = ({ show }: { show: boolean }) => {
   ]
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 mt-6">
+      {show && <h3 className="text-xl font-normal">AI Response</h3>}
       {mods.map((mod, i) => (
         <div
           className={`w-full lg:w-[900px] md:w-[700px] sm:w-full py-4 bg-white rounded-md shadow flex items-center pl-4 transition duration-800 ${

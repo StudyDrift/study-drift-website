@@ -39,7 +39,7 @@ export const Nav = () => {
           <button className="px-4 py-2 rounded-md hover:bg-gray-300 transition-colors hidden lg:flex md:flex sm:hidden">
             Sign in
           </button>
-          <button className="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-md transition-colors">
+          <button className="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-md transition-colors hidden lg:flex md:flex sm:hidden">
             Create Free Account
           </button>
           <button
@@ -51,7 +51,7 @@ export const Nav = () => {
         </div>
       </nav>
       {open && (
-        <div className="ml-10 flex gap-8 flex-col justify-center items-center">
+        <div className="px-8 flex gap-5 flex-col justify-center items-center">
           <a href="#" className="group text-black transition duration-300">
             K-12
             <span className="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-sky-600"></span>
@@ -68,6 +68,12 @@ export const Nav = () => {
             About Us
             <span className="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-sky-600"></span>
           </a>
+          <button className="border-slate-800 hover:border-slate-700 border-2 text-black px-4 py-2 rounded-md transition-colors w-full">
+            Sign in
+          </button>
+          <button className="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-md transition-colors w-full">
+            Create Free Account
+          </button>
         </div>
       )}
     </div>
